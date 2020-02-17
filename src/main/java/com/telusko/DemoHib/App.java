@@ -17,7 +17,16 @@ public class App
 {
     public static void main( String[] args )
     {
+      
+      AlienName an = new AlienName();
+      an.setFname("praveen");
+      an.setMname("kumaar");
+      an.setLname("bharaneedhaaran");
       Alien telusko = new Alien();
+      
+      telusko.setAid(107);
+      telusko.setColor("Purple");
+      telusko.setAname(an);
 		/*
 		 * telusko.setAid(106); telusko.setAname("Sivakami"); telusko.setColor("White");
 		 */
@@ -31,9 +40,9 @@ public class App
       
       Transaction tx = session.beginTransaction();
       
-      telusko = (Alien)session.get(Alien.class, 104);
+   
       
-//      session.save(telusko);
+     session.save(telusko);
       tx.commit();
       
       System.out.println(telusko);

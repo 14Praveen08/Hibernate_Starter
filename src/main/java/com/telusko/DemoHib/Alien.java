@@ -12,9 +12,9 @@ public class Alien {
 	
 	@Id
 	private int aid;
-	/* @Transient */
-	private String aname;
-//	@Column(name="aliencolor")
+	private AlienName aname;
+	//private String aname;
+	//@Column(name="aliencolor")
 	private String color;
 	public int getAid() {
 		return aid;
@@ -22,12 +22,19 @@ public class Alien {
 	public void setAid(int aid) {
 		this.aid = aid;
 	}
-	public String getAname() {
+	
+	
+
+	public AlienName getAname() {
 		return aname;
 	}
-	public void setAname(String aname) {
+	public void setAname(AlienName aname) {
 		this.aname = aname;
 	}
+	/*
+	 * public String getAname() { return aname; } public void setAname(String aname)
+	 * { this.aname = aname; }
+	 */
 	public String getColor() {
 		return color;
 	}
